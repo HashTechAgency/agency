@@ -203,7 +203,7 @@ const Header = () => {
           {arr.map((item, index) => (
             <li key={index} className="max-[1200px]:hidden  ">
               <Link
-                className="p-[10px_20px] text-[14px] bg-[#ededed] rounded-[13px] font-(family-name:--font-family) font-(family-width:500) "
+                className="p-[10px_20px] text-[14px] bg-[#ededed] heder-btn-hover rounded-[13px] font-(family-name:--font-family) font-(family-width:500) "
                 href=""
               >
                 {item}

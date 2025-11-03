@@ -37,8 +37,9 @@ html {
 
 body {
   overflow: hidden;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 2700px;
 }
 
 .text-medium {
@@ -115,4 +116,22 @@ body {
 
 .my-grid-areas-4 {
   grid-area: my-grid-areas-4;
+}
+
+.text-hover {
+  transition: color .3s linear;
+}
+
+.text-hover:hover {
+  color: #2cb7c6;
+}
+
+
+.heder-btn-hover {
+  transition: background-color .3s linear, color .3s linear;
+}
+
+.heder-btn-hover:hover {
+  background-color: #2cb7c6;
+  color: #ffffff;
 }

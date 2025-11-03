@@ -6,7 +6,7 @@ const HomePage = () => {
       className=" bg-no-repeat bg-center  max-[1024px]:overflow-hidden max-[1024px]:bg-[position:center_150px]"
       style={{ backgroundImage: "url(/img/home-bg.png" }}
     >
-      <div className="my-container h-[703px] max-[1650px]:overflow-x-hidden max-[1600px]:overflow-y-clip flex items-end justify-between max-[1024px]:flex-col max-[1024px]:h-auto  max-[1024px]:items-center max-[1024px]:text-center ">
+      <div className="my-container h-[703px] max-[1600px]:overflow-x-hidden max-[1600px]:overflow-y-clip flex items-end justify-between max-[1024px]:flex-col max-[1024px]:h-auto  max-[1024px]:items-center max-[1024px]:text-center ">
         <div className="max-w-[545px] max-[1024px]:max-w-screen ">
           <h1 className="text-[54px] max-w-[545px] max-[1024px]:max-w-full leading-[114%] text-extrabold max-[1024px]:flex max-[1024px]:flex-col max-[1024px]:items-center max-[1024px]:w-full max-[480px]:text-[44px] max-[400px]:text-[32px]">
             <span className="font-(family-name:--font-family) ">Создаём сайты</span>

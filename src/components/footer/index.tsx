@@ -40,7 +40,7 @@ const Footer = () => {
                     className={`${
                       i == 0
                         ? "text-[14px] text-[#b1b6b8] pb-[10px]"
-                        : "text-[16px] text-medium text-[#2a2a3c]"
+                        : "text-[16px] text-medium text-[#2a2a3c] text-hover"
                     } font-(family-name:--font-family)`}
                     key={Math.random()}
                   >
@@ -53,23 +53,24 @@ const Footer = () => {
               <li className="text-[14px] text-[#b1b6b8] font-(family-name:--font-family) pb-[10px]">
                 Связаться с нами
               </li>
-              <li className="text-[16px] text-medium text-[#2a2a3c] font-(family-name:--font-family)">
+              <li className="text-[16px] text-hover text-medium text-[#2a2a3c] font-(family-name:--font-family)">
                 +7 (996) 99 47 46
               </li>
-              <li className="text-[16px] text-medium text-[#2a2a3c] font-(family-name:--font-family)">
+              <li className="text-[16px] text-hover text-medium text-[#2a2a3c] font-(family-name:--font-family)">
                 +996 (999) 99 47 46
               </li>
-              <li className="text-[16px] text-medium text-[#2a2a3c] font-(family-name:--font-family)">
+              <li className="text-[16px] text-hover text-medium text-[#2a2a3c] font-(family-name:--font-family)">
                 hello@az-creativite.com
               </li>
             </ul>
           </div>
         </div>
         <div className="max-[600px]:items-center gap-[10px] max-[600px]:flex-col flex justify-around font-(family-name:--font-family) text-white pt-[31px] pb-[30px] text-[12px]">
-          <p>© 2024, HashTech Agency </p>
-          <p>Диджитал новой школы  Политика</p>
-          <p>конфиденциальности</p>
+          <p className="text-hover">© 2024, HashTech Agency </p>
+          <p className="text-hover">Диджитал новой школы  Политика</p>
+          <p className="text-hover">конфиденциальности</p>
         </div>
+        
       </div>
     </footer>
   );

@@ -66,7 +66,7 @@ const services = [
 const Price = () => {
   return (
     <section className=" mt-[-200px] max-[969px]:mt-10 max-[769px]:mt-20"> 
-      <div className="my-container">
+      <div className="my-container !max-w-[1800px]">
         <div>
           <h4 className="max-[769px]:text-[36px] text-min font-(family-name:--font-family) text-[44px] leading-[127%] uppercase text-[#30424a]">
             Стоимость <br /> создания{" "}
@@ -79,7 +79,7 @@ const Price = () => {
           </p>
         </div>
         <div className=" no-scrollbar overflow-x-auto pt-[93px]">
-          <div className="flex flex-col gap-[10px] w-[1500px] max-[769px]:w-auto  px-10 max-[769px]:px-0">
+          <div className="flex flex-col gap-[10px]  max-[1590px]:w-[1500px] max-[769px]:w-auto  max-[1500px]:px-10 max-[769px]:px-0">
             {services.map((item) => (
               <div
                 key={item.id}

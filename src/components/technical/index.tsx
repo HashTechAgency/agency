@@ -39,7 +39,7 @@ const Technical = () => {
             </button>
           </div>
         </div>
-        <div className="max-[1440px]:flex max-[769px]:order-1 max-[769px]:mt-0 max-[1024px]:flex-col max-[1440px]:gap-[100px] max-[1024px]:gap-[20px] max-[1440px]:w-full max-[1440px]:max-w-[calc(100vw-30px)] max-[1440px]:min-w-[calc(100vw-30px)] max-w-[377px] relative z-50 p-[20px_24px] mt-[160px] rounded-[20px] bg-[#f6f6f6] max-[1440px]:mt-[60px] ">
+        <div className="max-[1440px]:flex max-[769px]:order-1 max-[1440px]:p-10 max-[769px]:mt-0 max-[1024px]:flex-col max-[1440px]:gap-[100px] max-[1024px]:gap-[20px] max-[1440px]:w-full max-[1440px]:max-w-[calc(100vw-30px)] max-[1440px]:min-w-[calc(100vw-30px)] max-w-[377px] relative z-50 p-[20px_24px] mt-[160px] rounded-[20px] bg-[#f6f6f6] max-[1440px]:mt-[60px] ">
           <div className="pb-[33px] max-[1024px]:text-center">
             <h3 className="max-[1024px]:mb-[14px] max-[480px]:text-[28px] font-(family-name:--font-family) max-[1024px]:text-[48px] pb-2 text-extrabold text-[37px] leading-[92%] text-[#2a2a3c]">
               Оставьте свои <br className="max-[1024px]:hidden" /> контакты

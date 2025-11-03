@@ -60,9 +60,11 @@ const Express = () => {
               <div className="flex flex-col gap-[18px]">
                 <div className="relative">
                   <img src="svg/express-1.svg" alt="" />
-                  <span className="absolute top-[50%] text-[#2a2a3c] text-[14px] -translate-y-[50%] left-[73px] font-(family-name:--font-family)">
-                    Ваш телефон
-                  </span>
+                  <input
+                    placeholder="Ваш телефон"
+                    className="absolute w-full h-full block top-[50%] text-[#2a2a3c] text-[14px] -translate-y-[50%] left-[73px] font-(family-name:--font-family)"
+                    type="text"
+                  />
                 </div>
                 <div className="relative">
                   <img src="svg/express-2.svg" alt="" />
@@ -127,9 +129,11 @@ const Express = () => {
           <div className="flex flex-col gap-[18px]">
             <div className="relative">
               <img src="svg/express-1.svg" alt="" />
-              <span className="absolute top-[50%] text-[#2a2a3c] text-[14px] -translate-y-[50%] left-[73px] font-(family-name:--font-family)">
-                Ваш телефон
-              </span>
+              <input
+                placeholder="Ваш телефон"
+                className="absolute w-full h-full block top-[50%] text-[#2a2a3c] text-[14px] -translate-y-[50%] left-[73px] font-(family-name:--font-family)"
+                type="text"
+              />
             </div>
             <div className="relative">
               <img src="svg/express-2.svg" alt="" />
