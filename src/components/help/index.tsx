@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Help = () => {
@@ -19,9 +20,17 @@ const Help = () => {
         </div>
 
         <div className="absolute top-0 max-[550px]:hidden right-[-300px] max-[1440px]:right-[-300px] max-[1200px]:right-[-409px]">
-          <img className="max-[1440px]:hidden" src="img/Help.png" alt="" />
-          <img
-            className="max-[1440px]:inline hidden"
+          <Image
+            width={100}
+            height={100}
+            className="w-auto max-[1440px]:hidden"
+            src="img/Help.png"
+            alt=""
+          />
+          <Image
+            width={100}
+            height={100}
+            className="max-[1440px]:inline w-auto hidden"
             src="img/Help-2.png"
             alt=""
           />

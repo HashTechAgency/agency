@@ -111,7 +111,7 @@ const Price = () => {
                 </p>
 
                 <div>
-                  <button className="font-(family-name:--font-family) flex gap-[10px] text-[11px] leading-[130%] uppercase text-[#30424a] border p-[12px_22px] border-[#0e7c88] rounded-[2px]">
+                  <button className="cursor-pointer font-(family-name:--font-family) flex gap-[10px] text-[11px] leading-[130%] uppercase text-[#30424a] border p-[12px_22px] border-[#0e7c88] rounded-[2px]">
                     Подробнее
                     <svg
                       width="13"

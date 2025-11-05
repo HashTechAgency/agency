@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -11,17 +12,22 @@ const Map = () => {
             <span className="text-extrabold text-[#2a2a3c]">ПО ВСЕМУ МИРУ</span>
           </h2>
           <p className="pt-3 max-[769px]:text-start">
-            Мы гордимся работой с компаниями, которые <br className="max-[769px]:hidden" /> задает правила игры
-            на своих рынках
+            Мы гордимся работой с компаниями, которые{" "}
+            <br className="max-[769px]:hidden" /> задает правила игры на своих
+            рынках
           </p>
         </div>
         <div className="text-start relative max-[769px]:w-full">
-          <img
-            className="max-[1440px]:scale-110 max-[1024px]:scale-125 translate-y-[60px]  object-cover max-[769px]:hidden"
+          <Image
+            width={100}
+            height={100}
+            className="w-auto max-[1440px]:scale-110 max-[1024px]:scale-125 translate-y-[60px]  object-cover max-[769px]:hidden"
             src="img/map.png"
             alt=""
           />
-          <img
+          <Image
+            width={100}
+            height={100}
             className="w-full max-[769px]:block hidden"
             src="img/map-2.png"
             alt=""
@@ -93,7 +99,13 @@ const Map = () => {
               <span className="font-(family-name:--second-family) text-[16px] leading-[112%] text-white">
                 Написать в телеграм
               </span>
-              <img src="svg/map.svg" alt="" />
+              <Image
+                width={100}
+                height={100}
+                className="w-auto"
+                src="svg/map.svg"
+                alt=""
+              />
             </Link>
           </div>
         </div>

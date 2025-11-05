@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -242,10 +243,10 @@ const Header = () => {
         </ul>
       </nav>
       <div className="flex gap-[40px] items-center">
-        <button className="flex items-center max-[768px]:hidden h-[45px] bg-[#eeeeee] rounded-[12px]">
+        <button className="flex items-center cursor-pointer max-[768px]:hidden h-[45px] bg-[#eeeeee] rounded-[12px]">
           <span className="relative w-[62px] h-full">
-            <img
-              className="absolute bottom-0 left-0"
+            <Image width={100} height={100}
+              className="absolute w-full h-auto bottom-0 left-0"
               src="/header-btn.png"
               alt=""
             />

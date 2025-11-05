@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Cards = () => {
@@ -7,7 +8,9 @@ const Cards = () => {
         {[...Array(9)].map((_, index) => (
           <div key={index} className="">
             <div className="w-full aspect-[47/46] rounded">
-              <img
+              <Image
+                width={100}
+                height={100}
                 className="w-full h-full object-cover"
                 src="/img/cards.png"
                 alt=""
@@ -21,13 +24,13 @@ const Cards = () => {
                 Эффективный лендинг для агентства недвижимости
               </p>
               <div className="flex gap-1 flex-wrap">
-                <button className="rounded-[20px] border border-[rgba(14,_124,_136,_0.25)] px-[14px] py-2 text-[#213c49] text-light font-(family-name:--third-family)">
+                <button className="cursor-pointer rounded-[20px] border border-[rgba(14,_124,_136,_0.25)] px-[14px] py-2 text-[#213c49] text-light font-(family-name:--third-family)">
                   Landing
                 </button>
-                <button className="rounded-[20px] border border-[rgba(14,_124,_136,_0.25)] px-[14px] py-2 text-[#213c49] text-light font-(family-name:--third-family)">
+                <button className="cursor-pointer rounded-[20px] border border-[rgba(14,_124,_136,_0.25)] px-[14px] py-2 text-[#213c49] text-light font-(family-name:--third-family)">
                   Маркетинг
                 </button>
-                <button className="rounded-[20px] border border-[rgba(14,_124,_136,_0.25)] px-[14px] py-2 text-[#213c49] text-light font-(family-name:--third-family)">
+                <button className="cursor-pointer rounded-[20px] border border-[rgba(14,_124,_136,_0.25)] px-[14px] py-2 text-[#213c49] text-light font-(family-name:--third-family)">
                   Недвижимость
                 </button>
               </div>
@@ -36,7 +39,7 @@ const Cards = () => {
         ))}
       </div>
       <div className="my-container !pt-[67px]">
-        <button className="flex justify-center items-center gap-[45px] max-[480px]:text-[16px] max-[480px]:gap-4 w-full py-[33px] border border-[#0e7c88] rounded-[20px] text-[24px] text-[#0e7c88] text-extrabold" >
+        <button className="flex cursor-pointer justify-center items-center gap-[45px] max-[480px]:text-[16px] max-[480px]:gap-4 w-full py-[33px] border border-[#0e7c88] rounded-[20px] text-[24px] text-[#0e7c88] text-extrabold">
           Посмотреть все работы
           <svg
             width="25"

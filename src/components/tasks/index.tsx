@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -16,7 +17,8 @@ const Tasks = () => {
             <span className="text-extrabold text-[#353f4e]">
               бесплатный дизайн-концепт
             </span>{" "}
-            <span className="text-min text-[#353f4e]">всего</span><br />
+            <span className="text-min text-[#353f4e]">всего</span>
+            <br />
             <span className="text-min text-[#0e7c88]">за 2 дня</span>{" "}
           </h2>
           <p className="font-(family-name:--font-family) text-[16px] leading-[150%] text-[#353f4e] max-w-[358px] py-[24px] pl-3">
@@ -25,7 +27,7 @@ const Tasks = () => {
             дизайна.
           </p>
           <div className="flex items-center gap-[66px]">
-            <button className="relative">
+            <button className="relative cursor-pointer ">
               <svg
                 width="276"
                 height="67"
@@ -176,8 +178,14 @@ const Tasks = () => {
           </div>
         </div>
         <div className="absolute right-[-37px]  bottom-0 max-[1440px]:right-[-269px] max-[769px]:static">
-          <img src="img/tasks.png" alt="" />
-        </div> 
+          <Image
+            width={100}
+            height={100}
+            className="w-auto"
+            src="img/tasks.png"
+            alt=""
+          />
+        </div>
       </div>
     </section>
   );

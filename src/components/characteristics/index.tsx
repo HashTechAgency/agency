@@ -1,13 +1,26 @@
+import Image from "next/image";
 import React from "react";
 
 const Characteristics = () => {
   return (
     <section className="relative w-full mt-[160px]  max-w-[2100px] mx-auto ">
       <div className="absolute w-full top-[-31px] right-0">
-        <img className="w-full max-[769px]:h-[900px]" src="img/Characteristics-2.png" alt="" />
+        <Image
+          width={100}
+          height={100}
+          className="w-full max-[769px]:h-[900px]"
+          src="img/Characteristics-2.png"
+          alt=""
+        />
       </div>
       <div className="absolute z-50 max-[1900px]:w-[80%] max-[769px]:top-[100px] right-[-168px] max-[1440px]:w-full max-[1440px]:right-[-30%] max-[1160px]:right-[-50%] max-[769px]:w-[100%] max-[769px]:right-[-0%] max-[560px]:w-[120%] max-[560px]:right-[-15%] max-[380px]:top-[100px]">
-        <img className="w-full" src="img/Characteristics-1.png" alt="" />
+        <Image
+          width={100}
+          height={100}
+          className="w-full"
+          src="img/Characteristics-1.png"
+          alt=""
+        />
       </div>
       <div className="my-container relative ">
         <h2 className="relative z-50 font-(family-name:--font-family) text-[44px] max-[769px]:text-[28px] max-[440px]:text-[24px] leading-[118%] text-extrabold uppercase tracking-[0.01em] text-[#0e7c88]">
@@ -40,7 +53,13 @@ const Characteristics = () => {
           <div className="max-[769px]:shadow-2xl max-[769px]:overflow-hidden max-[769px]:block max-[769px]:pl-4 max-[769px]:pt-4  max-[769px]:row-[5/7] max-[769px]:col-[1/3] max-[1060px]:row-[5/8] max-[1060px]:col-[7/9] p-4 flex flex-col relative items-start border-[#0e7c88] border rounded-[20px] bg-[#0e7c88] row-[2/6] col-[5/6]">
             <div className="flex-1"></div>{" "}
             <div className="ml-auto absolute right-0 top-0">
-              <img src="/img/Characteristics-3.png" alt="" />
+              <Image
+                width={100}
+                height={100}
+                className="w-auto"
+                src="/img/Characteristics-3.png"
+                alt=""
+              />
             </div>
             <div className="relative z-50">
               <h3 className="pb-2 mt-auto font-(family-name:--font-family) text-extrabold text-[28px] leading-[107%] text-[#fff]">
@@ -85,7 +104,13 @@ const Characteristics = () => {
           <div className="max-[769px]:shadow-2xl max-[769px]:overflow-hidden max-[769px]:block max-[769px]:pl-4 max-[769px]:pt-4  max-[769px]:row-[6/8] max-[769px]:col-[2/4] max-[1060px]:row-[4/6] max-[1060px]:col-[1/5] p-4 flex flex-col relative items-start border-[#0e7c88] border rounded-[20px] bg-[#0e7c88] row-[6/8] col-[3/4]">
             <div className="flex-1"></div>{" "}
             <div className="ml-auto mr-[-2px] absolute right-0 top-0">
-              <img src="/img/Characteristics-4.png" alt="" />
+              <Image
+                width={100}
+                height={100}
+                className="w-auto"
+                src="/img/Characteristics-4.png"
+                alt=""
+              />
             </div>
             <div className="mt-[-15px] relative z-50">
               <h3 className="pb-2 mt-auto font-(family-name:--font-family) text-extrabold text-[28px] leading-[107%] text-[#fff]">

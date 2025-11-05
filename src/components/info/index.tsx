@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FC, useState } from "react";
 
 interface FaqItemProps {
@@ -22,10 +23,20 @@ const FaqItem: FC<FaqItemProps> = ({ i, question, answer }) => {
       >
         <div className="flex gap-[64px] max-[769px]:gap-[20px]">
           <span className="max-[580px]:hidden">
-            <img src="/svg/info.svg" alt="info" />
+            <Image
+              width={100}
+              height={100}
+              className="w-auto"
+              src="/svg/info.svg"
+              alt="info"
+            />
           </span>
 
-          <span className={`max-w-[422px] ${open || "!underline"} text-[#2A2A3C] leading-[150%] font-medium`}>
+          <span
+            className={`max-w-[422px] ${
+              open || "!underline"
+            } text-[#2A2A3C] leading-[150%] font-medium`}
+          >
             {question}
           </span>
         </div>
@@ -56,7 +67,9 @@ const FaqItem: FC<FaqItemProps> = ({ i, question, answer }) => {
         <>
           <div className="w-full h-[1px] bg-[#c3c3c3]"></div>
           <div className="pl-[104px] pr-[122px] max-[1024px]:pl-4 pt-[20px] max-[1024px]:pr-4 pb-[40px] text-[#2A2A3C] text-[14px] leading-[160%] animate-fadeIn max-[580px]:px-0">
-            <p className="font-(family-name:--font-family) text-[16px] leading-[160%] text-[#30424a]">{answer}</p>
+            <p className="font-(family-name:--font-family) text-[16px] leading-[160%] text-[#30424a]">
+              {answer}
+            </p>
           </div>
         </>
       )}
@@ -126,7 +139,7 @@ const Info = () => {
               <span className="text-min">информация</span>
             </h2>
           </div>
-          <button className="text-[14px] font-(family-name:--font-family) py-[20px] bg-[#ededed] shadow-[0_1px_0_0_rgba(0,_0,_0,_0.15)] rounded-xl gap-4  items-center flex px-4">
+          <button className="cursor-pointer text-[14px] font-(family-name:--font-family) py-[20px] bg-[#ededed] shadow-[0_1px_0_0_rgba(0,_0,_0,_0.15)] rounded-xl gap-4  items-center flex px-4">
             Задайте свой вопрос эксперту
             <span>
               <svg

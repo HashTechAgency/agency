@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Express = () => {
@@ -5,15 +6,29 @@ const Express = () => {
     <section className="my-container max-[1024px]:overflow-x-hidden max-[1024px]:overflow-y-clip ">
       <div className="flex justify-center -translate-x-[50px]   max-[1024px]:scale-125 max-[1024px]:-translate-x-20 max-[769px]:-translate-x-5 max-[769px]:scale-[1.15]">
         <div className="relative mr-[110px]">
-          <img className="" src="/img/express-1.png" alt="" />
-          <img
-            className="min-h-[652px] max-[1024px]:!min-h-[120%] max-[1024px]:max-h-[120%] max-[1024px]:h-[120%] absolute top-0 left-full "
+          <Image
+            width={100}
+            height={100}
+            className="w-auto"
+            src="/img/express-1.png"
+            alt=""
+          />
+          <Image
+            width={100}
+            height={100}
+            className="w-auto min-h-[652px] max-[1024px]:!min-h-[120%] max-[1024px]:max-h-[120%] max-[1024px]:h-[120%] absolute top-0 left-full "
             src="/img/express-2.png"
             alt=""
           />
         </div>
         <div className="pt-[80px] relative z-20 max-[769px]:w-[80%] max-[769px]:-translate-x-[20%] max-[769px]:translate-y-[15%]">
-          <img className="" src="/img/express-3.png" alt="" />
+          <Image
+            width={100}
+            height={100}
+            className="w-auto"
+            src="/img/express-3.png"
+            alt=""
+          />
           <div className="pl-[79px] block max-[1024px]:hidden">
             <div className="flex gap-[25px] mb-[25px]">
               <div className="flex rounded-[5px] items-center gap-4">
@@ -58,16 +73,16 @@ const Express = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-[18px]">
-                <div className="relative">
-                  <img src="svg/express-1.svg" alt="" />
+                <div className="relative cursor-pointer">
+                  <Image width={100} height={100} className="w-auto" src="svg/express-1.svg" alt="" />
                   <input
                     placeholder="Ваш телефон"
-                    className="absolute w-full h-full block top-[50%] text-[#2a2a3c] text-[14px] -translate-y-[50%] left-[73px] font-(family-name:--font-family)"
+                    className="absolute w-[calc(100%-74px)] outline-none focus:outline-none focus:ring-0 h-full block top-[50%] text-[#2a2a3c] text-[14px] -translate-y-[50%] left-[73px] font-(family-name:--font-family)"
                     type="text"
                   />
                 </div>
-                <div className="relative">
-                  <img src="svg/express-2.svg" alt="" />
+                <div className="relative cursor-pointer">
+                  <Image  width={100} height={100} className="w-auto" src="svg/express-2.svg" alt="" />
                   <span className="absolute  top-[50%] text-[#fff] leading-[112%] text-[16px] -translate-[50%] left-[50%] font-(family-name:--second-family)">
                     Отправить заявку
                   </span>
@@ -128,7 +143,7 @@ const Express = () => {
           </div>
           <div className="flex flex-col gap-[18px]">
             <div className="relative">
-              <img src="svg/express-1.svg" alt="" />
+              <Image  width={100} height={100}  className="w-auto" src="svg/express-1.svg" alt="" />
               <input
                 placeholder="Ваш телефон"
                 className="absolute w-full h-full block top-[50%] text-[#2a2a3c] text-[14px] -translate-y-[50%] left-[73px] font-(family-name:--font-family)"
@@ -136,7 +151,7 @@ const Express = () => {
               />
             </div>
             <div className="relative">
-              <img src="svg/express-2.svg" alt="" />
+              <Image  width={100} height={100} className="w-auto" src="svg/express-2.svg" alt="" />
               <span className="absolute  top-[50%] text-[#fff] leading-[112%] text-[16px] -translate-[50%] left-[50%] font-(family-name:--second-family)">
                 Отправить заявку
               </span>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Technical = () => {
@@ -15,12 +16,18 @@ const Technical = () => {
             </p>
           </div>
           <div className="max-[769px]:hidden">
-            <img src="/img/technical-2.png" alt="" />
+            <Image
+              width={100}
+              height={100}
+              className="w-auto"
+              src="/img/technical-2.png"
+              alt=""
+            />
             <p className="max-w-[235px] pt-[28px] pb-[24px]">
               Это Александр, наш менеджер. Он с радостью ответитна все ваши
               вопросы
             </p>
-            <button className="font-(family-name:--second-family) text-[16px] text-[#2a2a3c] border border-[#2a2a3c] px-[32px] py-[14px] rounded-[15px] flex items-center gap-2">
+            <button className="cursor-pointer  font-(family-name:--second-family) text-[16px] text-[#2a2a3c] border border-[#2a2a3c] px-[32px] py-[14px] rounded-[15px] flex items-center gap-2">
               <svg
                 width="25"
                 height="27"
@@ -72,9 +79,11 @@ const Technical = () => {
               ></textarea>
             </div>
             <div className="my-grid-areas-4">
-              <button className=" shadow-[0_1px_0_0_rgba(0,_0,_0,_0.15)] relative py-[18px]  bg-[#01c6c4] rounded-[10px] w-full font-(family-name:--font3) text-[16px] text-[#f6f6f6]">
-                <img
-                  className="absolute top-[-14px] left-[10px]"
+              <button className="cursor-pointer shadow-[0_1px_0_0_rgba(0,_0,_0,_0.15)] relative py-[18px]  bg-[#01c6c4] rounded-[10px] w-full font-(family-name:--font3) text-[16px] text-[#f6f6f6]">
+                <Image
+                  width={100}
+                  height={100}
+                  className="w-auto absolute top-[-14px] left-[10px]"
                   src="/img/Technical-3.png"
                   alt=""
                 />
@@ -84,9 +93,20 @@ const Technical = () => {
           </div>
         </div>
         <div className="absolute max-[769px]:static max-[769px]:w-full max-[769px]:translate-x-0 left-[50%] w-[40%] max-[1440px]:left-[unset] max-[1024px]:w-[70%] max-[1024px]:right-[0] max-[1024px]:translate-x-[40%] right-0 max-[1440px]:translate-0 max-[1440px]:top-[0px] top-[204px] translate-x-[-50%]">
-          <img className="max-[769px]:hidden" src="/img/technical.png" alt="" />
-          <img className="max-[769px]:block hidden w-full" src="/img/technical-0.png" alt="" />
-
+          <Image
+            width={100}
+            height={100}
+            className="w-auto max-[769px]:hidden"
+            src="/img/technical.png"
+            alt=""
+          />
+          <Image
+            width={100}
+            height={100}
+            className="max-[769px]:block hidden w-full"
+            src="/img/technical-0.png"
+            alt=""
+          />
         </div>
       </div>
     </section>

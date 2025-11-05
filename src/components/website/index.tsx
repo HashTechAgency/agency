@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Website = () => {
@@ -15,7 +16,6 @@ const Website = () => {
             инструментом для привлечения клиентов и увеличения продаж?
           </p>
           <div className="pt-[36px] block">
-            
             <h5 className="font-(family-name:--font-family) mt-[-20px] max-w-[173px] text-[16px] ">
               <span className="text-bold">98% наших клиентов</span> увеличили
               трафик через 3 месяца
@@ -142,8 +142,10 @@ const Website = () => {
             style={{ backgroundImage: "url(svg/Website-card-3.svg)" }}
           >
             <div className="relative p-[61px_29px_29px_61px]">
-              <img
-                className="absolute top-[-139px] left-[-132px]"
+              <Image
+                width={100}
+                height={100}
+                className="w-auto absolute top-[-139px] left-[-132px]"
                 src="/img/Website-card-3-1.png"
                 alt=""
               />
@@ -198,13 +200,17 @@ const Website = () => {
               </span>
             </div>
           </div>
-          {/*  */}
           <div className="relative z-20 max-[1024px]:scale-125 max-[769px]:pt-[100px]">
-            <img src="/img/Website-1.png" alt="" />
+            <Image
+              width={100}
+              height={100}
+              className="w-auto"
+              src="/img/Website-1.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
-      
     </section>
   );
 };
