@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const menuData = [
@@ -61,20 +62,22 @@ const Footer = () => {
                 Связаться с нами
               </li>
               <li className="text-[16px]  cursor-pointer  text-hover text-medium text-[#2a2a3c] font-(family-name:--font-family)">
-                +7 (996) 99 47 46
+                <a  href="tel:+996880234556">+996 (880) 23 45 56 </a>
               </li>
               <li className="text-[16px]  cursor-pointer  text-hover text-medium text-[#2a2a3c] font-(family-name:--font-family)">
-                +996 (999) 99 47 46
+                <a href="tel:+996551200532"> +996 (551) 20 05 32</a>
               </li>
               <li className="text-[16px]  cursor-pointer  text-hover text-medium text-[#2a2a3c] font-(family-name:--font-family)">
-                hello@az-creativite.com
+                <a href="mailto:HashTechDevs@gmail.com">HashTechDevs@gmail.com</a>
               </li>
             </ul>
           </div>
         </div>
         <div className="max-[600px]:items-center gap-[10px] max-[600px]:flex-col flex justify-around font-(family-name:--font-family) text-white pt-[31px] pb-[30px] text-[12px]">
-          <p className="cursor-pointer text-hover">© 2024, HashTech Agency </p>
-          <p className="cursor-pointer text-hover">Диджитал новой школы  Политика</p>
+          <p className="cursor-pointer text-hover">© 2022, HashTech Agency </p>
+          <p className="cursor-pointer text-hover">
+            Диджитал новой школы  Политика
+          </p>
           <p className="cursor-pointer text-hover">конфиденциальности</p>
         </div>
       </div>

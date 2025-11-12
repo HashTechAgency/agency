@@ -1,6 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { usePathname } from "next/navigation";
+
+interface BurderActiveProps {
+  IsActiveBurger: boolean;
+  setIsActiveBurger: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
 const Logo = () => (
   <svg
@@ -184,35 +192,55 @@ const Burder = () => {
   );
 };
 
-let arr = [
-  "Проекты",
-  "Услуги",
-  "Агентство",
-  "Экспертиза",
-  "процессы",
-  "Контакты",
+const arr = [
+  { label: "Проекты", href: "" },
+  { label: "Услуги", href: "" },
+  { label: "Агентство", href: "" },
+  { label: "Блог", href: "/blog" },
+  { label: "Процессы", href: "" },
+  { label: "Контакты", href: "" },
 ];
 
-const Header = () => {
-  return (
-    <header className="my-container flex justify-between items-center !py-[37px]">
-      <div>
-        <Logo />
-      </div>
-      <nav>
-        <ul className="flex gap-1 items-center">
-          {arr.map((item, index) => (
-            <li key={index} className="max-[1200px]:hidden  ">
-              <Link
-                className="p-[10px_20px] text-[14px] bg-[#ededed] heder-btn-hover rounded-[13px] font-(family-name:--font-family) font-(family-width:500) "
-                href=""
-              >
-                {item}
-              </Link>
-            </li>
-          ))}
+const BurderActive: React.FC<BurderActiveProps> = ({
+  IsActiveBurger,
+  setIsActiveBurger,
+}) => {
+  const pathname = usePathname();
 
-          <li className="max-[768px]:hidden">
+  return (
+    <div
+      className={`${
+        !IsActiveBurger ? "translate-x-full" : "translate-x-0"
+      } transition-[300ms] hidden max-[1200px]:block z-[90] top-0 left-0 fixed w-screen h-screen bg-[#eeeeee]`}
+    >
+      <div className="flex items-center justify-between px-[50px] pt-[50px] max-[600px]:px-[20px] max-[600px]:pt-[20px]">
+        <Logo />
+        <button
+          onClick={() => setIsActiveBurger((p) => false)}
+          className="text-5xl cursor-pointer"
+        >
+          x
+        </button>
+      </div>
+      <div className="w-[80%] mx-auto h-full">
+        <ul className="flex flex-col gap-6 mt-[60px] items-center">
+          {arr.map((item, index) => {
+            const isActive = pathname === item.href;
+
+            return (
+              <li
+                className={`${
+                  isActive
+                    ? "text-[#2cb7c6]"
+                    : "text-[#2a2a3c] hover:text-[#2cb7c6]"
+                } text-[24px] text-center font-(family-name:--font-family) font-(family-width:500) hover:text-[#2cb7c6] hover:underline hover:decoration-[#2cb7c6] hover:decoration-2 hover:underline-offset-4`}
+                key={index}
+              >
+                <Link href={item.label}>{item.label}</Link>
+              </li>
+            );
+          })}
+          <li className="max-[768px]:block hidden">
             <Link
               className="p-[10px_20px] text-[14px] text-white font-(family-name:--font-family) font-(family-width:500) flex items-center gap-0.5  bg-[#2cb7c6]  rounded-[13px] font-[var(--font-family)]"
               href=""
@@ -240,26 +268,115 @@ const Header = () => {
               </svg>
             </Link>
           </li>
+          <button className="items-center cursor-pointer max-[768px]:flex hidden h-[45px] bg-[#2cb7c6] rounded-[12px]">
+            <span className="relative w-[62px] h-full">
+              <Image
+                width={100}
+                height={100}
+                className="absolute w-full h-auto bottom-0 left-0"
+                src="/header-btn.png"
+                alt=""
+              />
+            </span>
+            <span className="font-(font-name:--font-family) text-[#fff] pr-[26px] text-medium  font-(font-width:500) text-[14px]">
+              Заказать звонок
+            </span>
+          </button>
         </ul>
-      </nav>
-      <div className="flex gap-[40px] items-center">
-        <button className="flex items-center cursor-pointer max-[768px]:hidden h-[45px] bg-[#eeeeee] rounded-[12px]">
-          <span className="relative w-[62px] h-full">
-            <Image width={100} height={100}
-              className="absolute w-full h-auto bottom-0 left-0"
-              src="/header-btn.png"
-              alt=""
-            />
-          </span>
-          <span className="font-(font-name:--font-family) pr-[26px] text-medium  font-(font-width:500) text-[14px]">
-            Заказать звонок
-          </span>
-        </button>
-        <div className="hidden max-[1200px]:flex">
-          <Burder />
-        </div>
       </div>
-    </header>
+    </div>
+  );
+};
+
+const Header = () => {
+  const [IsActiveBurger, setIsActiveBurger] = useState(false);
+  const pathname = usePathname();
+
+  return (
+    <>
+      <header className="my-container flex justify-between items-center !py-[37px]">
+        <div>
+          <Logo />
+        </div>
+        <nav>
+          <ul className="flex gap-1 items-center">
+            {arr.map((item, index) => {
+              const isActive = pathname === item.href;
+
+              return (
+                <li key={index} className="max-[1200px]:hidden  ">
+                  <Link
+                    className={` ${
+                      isActive
+                        ? "text-[#ededed] bg-[#2cb7c6] hover:text-[#2cb7c6]"
+                        : ""
+                    } p-[10px_20px] text-[14px]  heder-btn-hover rounded-[13px] font-(family-name:--font-family) font-(family-width:500)`}
+                    href={item.href}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
+
+            <li className="max-[768px]:hidden">
+              <Link
+                className="p-[10px_20px] text-[14px] text-white font-(family-name:--font-family) font-(family-width:500) flex items-center gap-0.5  bg-[#2cb7c6]  rounded-[13px] font-[var(--font-family)]"
+                href=""
+              >
+                обсудить проект
+                <svg
+                  width="17"
+                  height="20"
+                  viewBox="0 0 17 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.57 7.15509C7.85766 6.21 9.19568 6.21 9.48334 7.15509L10.2073 9.53379C10.3044 9.85266 10.554 10.1022 10.8728 10.1993L13.2515 10.9233C14.1966 11.2109 14.1966 12.549 13.2515 12.8366L10.8728 13.5606C10.554 13.6577 10.3044 13.9072 10.2073 14.2261L9.48334 16.6048C9.19568 17.5499 7.85766 17.5499 7.57 16.6048L6.84601 14.2261C6.74895 13.9072 6.49939 13.6577 6.18052 13.5606L3.80182 12.8366C2.85673 12.549 2.85673 11.2109 3.80182 10.9233L6.18052 10.1993C6.49939 10.1022 6.74895 9.85266 6.84601 9.53379L7.57 7.15509Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M13.9114 4.72156L14.3317 6.07551L15.6857 6.49579L14.3317 6.91607L13.9114 8.27002L13.4912 6.91607L12.1372 6.49579L13.4912 6.07551L13.9114 4.72156Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M9.9704 0L10.3366 1.17984L11.5165 1.54608L10.3366 1.91232L9.9704 3.09216L9.60416 1.91232L8.42432 1.54608L9.60416 1.17984L9.9704 0Z"
+                    fill="white"
+                  />
+                </svg>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <div className="flex gap-[40px] items-center">
+          <button className="flex items-center cursor-pointer max-[768px]:hidden h-[45px] bg-[#eeeeee] rounded-[12px]">
+            <span className="relative w-[62px] h-full">
+              <Image
+                width={100}
+                height={100}
+                className="absolute w-full h-auto bottom-0 left-0"
+                src="/header-btn.png"
+                alt=""
+              />
+            </span>
+            <span className="font-(font-name:--font-family) pr-[26px] text-medium  font-(font-width:500) text-[14px]">
+              Заказать звонок
+            </span>
+          </button>
+          <div
+            onClick={() => setIsActiveBurger((p) => !p)}
+            className="hidden max-[1200px]:flex"
+          >
+            <Burder />
+          </div>
+        </div>
+      </header>
+      <BurderActive
+        IsActiveBurger={IsActiveBurger}
+        setIsActiveBurger={setIsActiveBurger}
+      />
+    </>
   );
 };
 

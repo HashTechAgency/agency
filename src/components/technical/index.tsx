@@ -15,7 +15,11 @@ const Technical = () => {
               и дадим предварительную оценку вашего проекта
             </p>
           </div>
-          <div className="max-[769px]:hidden">
+          <a
+            target="_blank"
+            href="https://wa.me/996880234556"
+            className="max-[769px]:hidden"
+          >
             <Image
               width={100}
               height={100}
@@ -44,7 +48,7 @@ const Technical = () => {
               </svg>
               Написать в телеграм
             </button>
-          </div>
+          </a>
         </div>
         <div className="max-[1440px]:flex max-[769px]:order-1 max-[1440px]:p-10 max-[769px]:mt-0 max-[1024px]:flex-col max-[1440px]:gap-[100px] max-[1024px]:gap-[20px] max-[1440px]:w-full max-[1440px]:max-w-[calc(100vw-30px)] max-[1440px]:min-w-[calc(100vw-30px)] max-w-[377px] relative z-50 p-[20px_24px] mt-[160px] rounded-[20px] bg-[#f6f6f6] max-[1440px]:mt-[60px] ">
           <div className="pb-[33px] max-[1024px]:text-center">
