@@ -24,7 +24,7 @@ export interface NewsItem {
   category: Category;
   tags: Tag[];
   author: Author;
-  created_at: string; 
+  created_at: string;
   updated_at: string;
   slug: string;
   name: string;
@@ -55,6 +55,29 @@ export interface Author {
   first_name: string;
   last_name: string;
   email: string;
+}
+function Skeleton({ className = "" }) {
+  return (
+    <div className={`animate-pulse bg-gray-200 rounded-md ${className}`} />
+  );
+}
+
+export function BlogCardSkeleton() {
+  return (
+    <div className="rounded-3xl">
+      {/* Фото */}
+      <Skeleton className="w-full aspect-[84/46] rounded-[24px]" />
+
+      <div className="pt-[16px] space-y-2">
+        {/* Дата */}
+        <Skeleton className="w-24 h-4" />
+
+        {/* Заголовок строки */}
+        <Skeleton className="w-full h-5" />
+        <Skeleton className="w-3/4 h-5" />
+      </div>
+    </div>
+  );
 }
 
 const Blog = () => {
@@ -121,21 +144,31 @@ const Blog = () => {
           Блог HashTech Agency
         </h1>
         <ul className="flex items-center gap-4 overflow-x-auto overflow-y-clip no-scrollbar">
-          <li>
-            <Link
-              className={`block px-6 py-3 w-[125px] rounded-[16px] ${
-                !Number(categoryParam)
-                  ? "bg-[#2cb7c6] text-white"
-                  : "bg-[#f5f5f5] text-black  hover:bg-[#2cb7c6] hover:text-white"
-              }`}
-              href={`/blog/`}
-            >
-              Все статьи
-            </Link>
-          </li>
+          {!loading ? (
+            <li>
+              <Link
+                className={`block px-6 py-3 w-[125px] rounded-[16px] ${
+                  !Number(categoryParam)
+                    ? "bg-[#2cb7c6] text-white"
+                    : "bg-[#f5f5f5] text-black  hover:bg-[#2cb7c6] hover:text-white"
+                }`}
+                href={`/blog/`}
+              >
+                Все статьи
+              </Link>
+            </li>
+          ) : (
+            ""
+          )}
 
           {loading ? (
-            <p className="text-center mt-8 ">Загрузка...</p>
+            <>
+              <Skeleton className="w-[130px] h-[45px] !rounded-2xl" />
+              <Skeleton className="w-[130px] h-[45px] !rounded-2xl" />
+              <Skeleton className="w-[130px] h-[45px] !rounded-2xl" />
+              <Skeleton className="w-[130px] h-[45px] !rounded-2xl" />
+              <Skeleton className="w-[130px] h-[45px] !rounded-2xl" />
+            </>
           ) : (
             Categories.map((item, i) => (
               <li key={i}>
@@ -157,7 +190,14 @@ const Blog = () => {
 
         <div className="grid grid-cols-3 gap-[20px] pt-[20px] max-[1024px]:grid-cols-2 max-[550px]:grid-cols-1">
           {loading ? (
-            <p className="text-center mt-8">Загрузка...</p>
+            <>
+              <BlogCardSkeleton />
+              <BlogCardSkeleton />
+              <BlogCardSkeleton />
+              <BlogCardSkeleton />
+              <BlogCardSkeleton />
+              <BlogCardSkeleton />
+            </>
           ) : (
             news.map((item, i) => {
               const date = new Date(item.created_at);

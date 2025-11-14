@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 
 export default function BlogPage() {
   return (
-    <Suspense fallback={<div>Загрузка...</div>}>
+    <Suspense fallback={<div></div>}>
         <Blog />
     </Suspense>
   );
