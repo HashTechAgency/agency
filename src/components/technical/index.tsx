@@ -63,21 +63,21 @@ const Technical = () => {
           <div className="flex flex-col gap-[10px]  flex-1 my-grid-areas">
             <div className="my-grid-areas-1">
               <input
-                className="px-[24px] py-[16px] rounded-[10px] w-full    shadow-[0_4px_4px_0_rgba(0,_0,_0,_0.25),_0_1px_1px_0_rgba(0,_0,_0,_0.25),_0_4px_2px_0_rgba(0,_0,_0,_0.05)]"
+                className="px-[24px] py-[16px] outline-none rounded-[10px] w-full    shadow-[0_4px_4px_0_rgba(0,_0,_0,_0.25),_0_1px_1px_0_rgba(0,_0,_0,_0.25),_0_4px_2px_0_rgba(0,_0,_0,_0.05)]"
                 type="text"
                 placeholder="Как вас зовут ?"
               />
             </div>
             <div className="my-grid-areas-2">
               <input
-                className="px-[24px] py-[16px] rounded-[10px] w-full    shadow-[0_4px_4px_0_rgba(0,_0,_0,_0.25),_0_1px_1px_0_rgba(0,_0,_0,_0.25),_0_4px_2px_0_rgba(0,_0,_0,_0.05)]"
+                className="px-[24px] py-[16px] outline-none rounded-[10px] w-full    shadow-[0_4px_4px_0_rgba(0,_0,_0,_0.25),_0_1px_1px_0_rgba(0,_0,_0,_0.25),_0_4px_2px_0_rgba(0,_0,_0,_0.05)]"
                 type="text"
                 placeholder="Телефон или месенджер"
               />
             </div>
             <div className="my-grid-areas-3">
               <textarea
-                className="px-[24px] py-[16px] rounded-[10px] w-full  h-full  shadow-[0_4px_4px_0_rgba(0,_0,_0,_0.25),_0_1px_1px_0_rgba(0,_0,_0,_0.25),_0_4px_2px_0_rgba(0,_0,_0,_0.05)]"
+                className="px-[24px] py-[16px] outline-none rounded-[10px] w-full  h-full  shadow-[0_4px_4px_0_rgba(0,_0,_0,_0.25),_0_1px_1px_0_rgba(0,_0,_0,_0.25),_0_4px_2px_0_rgba(0,_0,_0,_0.05)]"
                 placeholder="Кратко опишите задачу"
                 id=""
               ></textarea>

@@ -31,7 +31,7 @@ const Footer = () => {
     >
       <div className="my-container">
         <div className="px-[150px] py-[70px] rounded-[76px] bg-white flex justify-between max-[1440px]:px-[30px] max-[1440px]:py-[50px] max-[769px]:flex-col ">
-          <div className="">
+          <Link href={"/"} className="">
             <Image
               width={100}
               height={100}
@@ -39,7 +39,7 @@ const Footer = () => {
               src="/img/logo.png"
               alt=""
             />
-          </div>
+          </Link>
           <div className="flex gap-[75px] max-[1224px]:gap-4 max-[900px]:grid max-[900px]:grid-cols-2 max-[769px]:pt-10 max-[480px]:flex max-[480px]:flex-col max-[480px]:text-center max-[480px]:gap-[40px]">
             {menuData.map((item) => (
               <ul className="flex flex-col gap-[10px]" key={Math.random()}>
@@ -74,11 +74,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="max-[600px]:items-center gap-[10px] max-[600px]:flex-col flex justify-around font-(family-name:--font-family) text-white pt-[31px] pb-[30px] text-[12px]">
-          <p className="cursor-pointer text-hover">© 2022, HashTech Agency </p>
+          <p className="cursor-pointer text-hover">© 2025, HashTech Agency </p>
           <p className="cursor-pointer text-hover">
             Диджитал новой школы  Политика
           </p>
-          <p className="cursor-pointer text-hover">конфиденциальности</p>
+          <p className="cursor-pointer text-hover">Конфиденциальности</p>
         </div>
       </div>
     </footer>

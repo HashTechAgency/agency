@@ -295,9 +295,9 @@ const Header = () => {
   return (
     <>
       <header className="my-container flex justify-between items-center !py-[37px]">
-        <div>
+        <Link href={"/"}>
           <Logo />
-        </div>
+        </Link>
         <nav>
           <ul className="flex gap-1 items-center">
             {arr.map((item, index) => {

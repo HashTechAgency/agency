@@ -1,5 +1,5 @@
 import Approach from "@/components/approach";
-import Cards from "@/components/cards";
+import Cards from "@/components/news";
 import Characteristics from "@/components/characteristics";
 import Express from "@/components/express";
 import Help from "@/components/help";
